@@ -1,4 +1,4 @@
-DOCKERFILES := $(shell find images -name Dockerfile)
+DOCKERFILES := $(shell git diff --name-only HEAD^ images)
 IMAGES := ${DOCKERFILES:%/Dockerfile=%}
 REPOSITRY_NAME := vanppo
 
